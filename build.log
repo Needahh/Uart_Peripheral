@@ -1,0 +1,6 @@
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/zul/AI-HDL/DP_1'
+make[1]: *** No rule to make target '/peripheral.v', needed by 'sim_build/rtl/sim.vvp'.  Stop.
+make[1]: Leaving directory '/home/zul/AI-HDL/DP_1'
+make: *** [/home/zul/hdl_venv/lib/python3.12/site-packages/cocotb_tools/makefiles/Makefile.inc:17: sim] Error 2

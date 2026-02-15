@@ -1,0 +1,17 @@
+# --- 1. Load Hardware Source Files (pointing to subfolders) ---
+read_verilog src/peripheral.v
+read_verilog src/tt_wrapper.v
+read_verilog src/uart/uart_tx.v
+read_verilog src/uart/uart_rx.v
+read_verilog src/uart/baud_gen.v
+
+# --- 2. Process Hierarchy ---
+hierarchy -check -top tqvp_zul_uart
+
+# --- 3. Synthesis Pipeline ---
+# 'proc' converts behavioral Verilog to netlist, 'opt' optimizes it
+proc; opt;
+
+# --- 4. Final Reports and Output ---
+stat
+write_verilog -noattr synthesized_output.v
