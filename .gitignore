@@ -1,0 +1,21 @@
+# Build artifacts
+__pycache__/
+*.pyc
+sim_build/
+*.vcd
+*.vvp
+*.log
+build.log
+synthesized_output.v
+
+# OpenLane runs
+runs/
+
+# Editor files
+.vscode/
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
